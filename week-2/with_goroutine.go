@@ -37,7 +37,7 @@ func CountWord(path string, wg *sync.WaitGroup) ([]string, error) {
 func main() {
     var files []string
 
-    root := "/Users/vietwow/Documents/Grab/week-2/assignment/files"
+    root := "./files"
     err := filepath.Walk(root, func(path string, info os.FileInfo, err error) error {
         if info.Mode().IsRegular() {
             // fmt.Println("Listed path : ", path)
