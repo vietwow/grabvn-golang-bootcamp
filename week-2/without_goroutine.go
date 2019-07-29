@@ -31,7 +31,7 @@ func CountWord(path string) ([]string, error) {
 func main() {
     var files []string
 
-    root := "/Users/vietwow/Documents/Grab/week-2/assignment/files"
+    root := "./files"
     err := filepath.Walk(root, func(path string, info os.FileInfo, err error) error {
         files = append(files, path)
         return nil
