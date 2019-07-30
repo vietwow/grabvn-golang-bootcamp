@@ -30,7 +30,7 @@ func CountWord(path string, wg *sync.WaitGroup) ([]string, error) {
         words = append(words,scanner.Text())
     }
 
-    fmt.Println("=> Finished file : ", path)
+    // fmt.Println("=> Finished file : ", path)
     return words, nil
 }
 
@@ -55,7 +55,8 @@ func main() {
     wg.Add(total)
 
     for _, file := range files {
-        fmt.Println("Processing file : ", file)
+        file := file
+        // fmt.Println("Processing file : ", file)
         go func() {
             words, err := CountWord(file, &wg)
             if (err != nil) {

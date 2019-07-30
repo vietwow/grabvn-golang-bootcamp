@@ -1,4 +1,4 @@
-package main
+package calculator
 
 import (
     "fmt"
@@ -43,7 +43,7 @@ type Calculator interface {
 
 type calc struct {}
 
-func NewCalculator() Calculator {
+func newCalculator() Calculator {
 	return calc{}
 }
 
@@ -70,7 +70,7 @@ func main() {
     // fmt.Print(text)
     a, b, op, _ := parse(text)
 
-    calc := NewCalculator()
+    calc := newCalculator()
 
     var result float64
     switch op {
